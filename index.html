@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIVE — Vaccine Integrity Verification System</title>
+<meta name="description" content="Cold-chain integrity verification for vaccine batches. Register batches, verify storage conditions, track inspection history.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <rect x="11" y="3" width="8" height="4" rx="1" fill="currentColor" opacity="0.55"/>
+          <path d="M9 7h12v15a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5V7z" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M9 15h12" stroke="currentColor" stroke-width="2"/>
+          <path d="M13 19.5l2.5 2.5L19 18" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>VIVE</strong>
+        <em>Vaccine Integrity Verification System</em>
+      </span>
+    </div>
+    <div class="topbar-meta">
+      <span class="meta-item"><span class="micro">System date</span><span class="mono" id="sysDate">—</span></span>
+      <span class="meta-item"><span class="micro">Batches</span><span class="mono" id="statBatches">0</span></span>
+      <span class="meta-item"><span class="micro">In queue</span><span class="mono" id="statQueue">0</span></span>
+    </div>
+  </div>
+</header>
+
+<nav class="mainnav" aria-label="Primary">
+  <div class="wrap nav-in" id="navIn"></div>
+</nav>
+
+<main class="wrap" id="main"></main>
+
+<footer class="wrap foot">
+  <span class="micro">Cold-chain verification console · data stays in this browser</span>
+  <button class="linklike" id="wipeData" type="button">Clear all data</button>
+</footer>
+
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <h3 id="modalTitle"></h3>
+      <button class="iconbtn" id="modalClose" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
